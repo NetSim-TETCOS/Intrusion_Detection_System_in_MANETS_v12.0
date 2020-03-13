@@ -324,7 +324,7 @@ void fn_NetSim_IEEE802_11_CSMACA_ProcessAck()
 	NetSim_PACKET* p=IEEE802_11_CURR_MAC->currentProcessingPacket;
 
 	#ifdef _NETSIM_WATCHDOG_
-		if(IEEE802_11_CURR_MAC->nRetryCount == 1) //first time only
+		if(IEEE802_11_CURR_MAC->nRetryCount == 0) //first time only
 			add_watchdog_timer(pstruEventDetails->nDeviceId, IEEE802_11_CURR_MAC->currentProcessingPacket);
 #endif
 

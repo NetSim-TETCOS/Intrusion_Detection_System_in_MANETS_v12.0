@@ -84,7 +84,7 @@ void add_watchdog_timer(NETSIM_ID dev,NetSim_PACKET* packet)
 	pevent.nDeviceType=DEVICE_TYPE(dev);
 	pevent.nEventType=TIMER_EVENT;
 	pevent.nInterfaceId=pstruEventDetails->nInterfaceId;
-	pevent.nPacketId=0;
+	pevent.nPacketId=packet->nPacketId;
 	pevent.nProtocolId=MAC_PROTOCOL_IEEE802_11;
 	pevent.nSubEventType=WATCHDOG_TIMER;
 	pevent.pPacket = fn_NetSim_Packet_CopyPacket(packet);
