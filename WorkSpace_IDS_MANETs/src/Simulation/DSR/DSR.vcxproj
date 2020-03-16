@@ -118,6 +118,7 @@
       <OutputFile>$(OutDir)libDSR.dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib</AdditionalLibraryDirectories>
       <AdditionalOptions>List.lib DSR.lib NetworkStack.lib Metrics.lib %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>..\lib\lib$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -136,7 +137,7 @@
       <OutputFile>$(OutDir)libDSR.dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib_x64</AdditionalLibraryDirectories>
       <AdditionalOptions>List.lib DSR.lib NetworkStack.lib Metrics.lib %(AdditionalOptions)</AdditionalOptions>
-      <ImportLibrary>$(OutDir)lib$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>..\lib_x64\lib$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
